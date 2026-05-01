@@ -1,4 +1,8 @@
 -- Requêtes READ (Membre 1 - Lead)
 USE NS test DB test;
 
--- TODO : ajouter les requêtes SELECT ici
+SELECT * FROM utilisateur;
+SELECT * FROM categorie;
+SELECT * FROM produit;
+
+SELECT * FROM produit FETCH categorie_id;
