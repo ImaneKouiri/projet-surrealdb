@@ -1,0 +1,10 @@
+services:
+  surrealdb:
+    image: surrealdb/surrealdb:latest
+    container_name: surrealdb
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/data
+    command: start --log trace --user root --pass root file:/data/database.db
+    restart: unless-stopped
